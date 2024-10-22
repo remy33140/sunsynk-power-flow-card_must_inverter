@@ -20,6 +20,7 @@ import {Azzurro} from './brands/azzurro';
 import {MPPSolar} from './brands/mpp-solar';
 import {SMASolar} from './brands/sma-solar';
 import {E3dc} from './brands/e3dc';
+import {Must} from './brands/must';
 
 
 
@@ -35,6 +36,8 @@ export class InverterFactory {
 
     private static createInstance(brand: InverterModel): InverterSettingsDto {
         switch (brand) {
+            case InverterModel.Must:
+                return new Must();
             case InverterModel.Azzurro:
                 return new Azzurro();
             case InverterModel.Solis:
